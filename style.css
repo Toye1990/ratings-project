@@ -117,7 +117,7 @@ bgcolor{
 
 .all-container{
     width: 25%;
-    height: 58vh;
+    height: 60vh;
     background-color: hsl(213, 19%, 18%);
     margin: auto;
     border-radius: 20px;
@@ -153,7 +153,8 @@ bgcolor{
 
 
 
-button{
+.submitNow{
+    margin-top: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
