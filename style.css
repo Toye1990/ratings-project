@@ -91,6 +91,7 @@ button{
     font-size: 12px;
     color: #fff;
     letter-spacing: 2px;
+    cursor: pointer;
 }
 
 .orange-color{
