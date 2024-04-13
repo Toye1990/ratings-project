@@ -12,10 +12,27 @@ const button1 = document.querySelector('.figures1')
 
 
 //add click event on submit button
-submitButton.addEventListener('click', () =>{
-    thanksContainer.classList.remove("hidden")
-    mainContainer.style.display = 'none'
+/*const showNow = () =>{
+    submitButton.addEventListener('click', () =>{
+        thanksContainer.classList.remove("hidden")
+        mainContainer.style.display = 'none'
 })
+}*/
+
+//const showDisplay = showNow()
+
+let clicked = false
+const showNow = (event) =>{
+    event.preventDefault()
+if(clicked === false){
+    return
+}
+  thanksContainer.classList.remove("hidden")
+  mainContainer.style.display = 'none'
+}
+
+submitButton.addEventListener('click', showNow)
+
 
 rateNow.addEventListener('click', () =>{
     thanksContainer.classList.add('hidden')
@@ -23,11 +40,24 @@ rateNow.addEventListener('click', () =>{
 })
 
 
-buttons.forEach((button) =>{
-    button.addEventListener('click', () =>{
-       ratins.innerHTML = button.innerHTML
+const buttonMart = () =>{
+    buttons.forEach((button) =>{
+        button.addEventListener('click', () =>{
+         clicked = true
+           ratins.innerHTML = button.innerHTML
+        })
     })
-})
+}
+
+const buttonTrue = buttonMart()
+
+/*if (showDisplay == buttonTrue) {
+    thanksContainer.classList.remove("hidden")
+    mainContainer.style.display = 'none'
+}else{
+   return;
+}*/
+
 
 button1.addEventListener('click', () =>{
 button1.style.backgroundColor = 'gray'
@@ -79,4 +109,7 @@ button5.addEventListener('click', () =>{
      button4.style.backgroundColor =''
 }
 })
+
+
+ 
 
